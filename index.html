@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+</head>
+
+<body>
+    <div style="text-align:center">
+        <img src="kohli.jpg" alt="api_img" class="test" style="height: 500px; width: 600px;">
+        <br><br><label>Enter Name:</label><input type="text" id="tname" /> <br> <br>
+        <button id="btn">Click Me</button>
+    </div>
+
+
+
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener('click', function() {
+            var name = document.getElementById("tname");
+            var inputValue = name.value;
+            alert(inputValue);
+            var img = document.getElementsByClassName("test")[0];
+            img.src = "https://joeschmoe.io/api/v1/" + inputValue;
+        });
+    </script>
+</body>
+
+</html>
